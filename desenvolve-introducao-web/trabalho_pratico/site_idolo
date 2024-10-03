@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pag_idolo</title>
+    </head>
+    <body>
+        <header>
+            <h1>Hulk</h1>
+            <h3>O melhor jogador do Brasil desde que chegou ao país</h3>
+            <img src="./imgs/hulk-dpa.jpg" width="400">
+        </header>
+
+        <main>
+            <section>
+            <P>
+                Givanildo Vieira de Souza, mais conhecido como HULK, é um jogador de futebol brasileiro que atua pelo Clube Atlético
+                Mineiro, onde já fez mais de 100 gols, conquistou vários títulos individuais e coletivos, e já é considerado um dos
+                grandes ídolos do clube.
+            </P>
+
+            <aside>
+            <h2>Ficha</h2>
+            <table border="1">
+                <tbody>
+                    <tr>  
+                        <td>Nome completo</td>
+                        <td>Givanildo Vieira de Souza</td>
+                    </tr>
+                    <tr>
+                        <td>Data de nascimento</td>
+                        <td>25/07/1986</td>
+                    </tr>
+                    <tr>
+                        <td>Local de nascimento</td>
+                        <td>Campina Grande, Paraíba</td>
+                    </tr>
+                    <tr>
+                        <td>Altura</td>
+                        <td>1,80m</td>
+                    </tr>
+                    <tr>
+                        <td>Clube</td>
+                        <td>Clube Atlético Mineiro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+    </section>
+    <section>
+            <h2>Carreira</h2>
+            <p>
+                Hulk, cujo nome completo é Givanildo Vieira de Sousa, é um renomado jogador de futebol brasileiro, 
+                conhecido por sua força física, habilidades técnicas e estilo de jogo progressivo. Ele nasceu em Campina Grande, 
+                na Paraíba, em 25 de julho de 1986. Sua carreira profissional começou no Vitória, um clube brasileiro, em 2004, 
+                antes de se transferir para o Porto, de Portugal, onde conquistou vários títulos, incluindo a Liga dos Campeões da UEFA 
+                e da Liga Europa. Sua habilidade em campo chamou a atenção dos clubes europeus, e em 2012 ele se juntou ao Zenit São 
+                Petersburgo, na Rússia, onde se tornou um dos jogadores mais bem pagos do mundo. Além de seu sucesso em clubes, Hulk 
+                também representou a Seleção Brasileira em diversas competições, incluindo a Copa do Mundo da FIFA. Sua carreira é 
+                marcada pela presença de sua física imponente, velocidade, habilidade em marcar gols e sua contribuição para os sucessos
+                de clubes tanto nacionais quanto internacionais. Ao chegar ao Brasil, Hulk também deixou sua marca no cenário nacional
+                ao se juntar ao Atlético Mineiro, conhecido como Galo, em 2021. Desde sua chegada ao clube, ele rapidamente se 
+                classificou como um dos melhores jogadores do Brasil, liderando o Galo em competições importantes e mostrando um 
+                desempenho excepcional em campo. Sua presença no Atlético Mineiro não só se solidificou como uma lenda do futebol 
+                brasileiro, mas também elevou o status de ídolo do clube. Atualmente, Hulk vive o melhor momento de sua carreira, 
+                demonstrando sua habilidade única, liderança e dedicação ao esporte, enquanto continua a deixar sua marca no futebol 
+                brasileiro e internacional.
+            </p>
+            <h2>Principais conquistas</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Principais Conquistas</th>
+                        <th>Ano</th>
+                    </tr>
+                    <tr>
+                        <td>Porto (Portugal)</td>
+                        <td>
+                            <ul>4x liga portuguesa</ul>
+                            <ul>3x Taça de Portugal</ul>
+                            <ul>Europa League</ul>
+                        </td>
+                        <td>
+                            <ul>2009 - 2011 - 2012 - 2013</ul>
+                            <ul>2009 - 2010 - 2011</ul>
+                            <ul>2011</ul>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td>Zenit (Rússia)</td>
+                            <td>
+                                <ul>Liga russa</ul>   
+                                <ul>Copa da Rússia</ul>
+                                <ul>Supercopa da Rússia</ul>                           
+                            </td>
+                            <td>
+                                <ul>2015</ul>
+                                <ul>2016</ul>
+                                <ul>2016</ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shangai SIPG (China)</td>
+                            <td>
+                                <ul>Liga chinesa</ul>
+                                <ul>Supercopa da China</ul>
+                            </td>
+                            <td>
+                                <ul>2018</ul>
+                                <ul>2019</ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Atlético Mineiro (Brasil)</td>
+                            <td>
+                                <ul>Campeonato Brasileiro</ul>
+                                <ul>Copa do Brasil</ul>
+                                <ul>Supercopa do Brasil</ul>
+                                <ul>4x Campeonato Mineiro</ul>
+                            </td>
+                            <td>
+                                <ul>2021</ul>
+                                <ul>2021</ul>
+                                <ul>2022</ul>
+                                <ul>2021 - 2022 - 2023 - 2024</ul>
+                            </td>
+                        </tr>
+                </thead>
+            </table>
+            <h2>Conquistas individuais</h2>
+            <p>
+                Além das várias conquistas coletivas, o atleta também empilha títulos individuais, como a artilharia
+                do campeonato brasileiro, copa do brasil, campeonato mineiro e liga da Rússia. Hulk ainda foi o líder de assistências 
+                do brasileirão de 2023 pelo Galo, ganhou a bola de prata do campeonato português pelo Zenit e fez parte da seleção de
+                melhores jogadores do torneio mais importante da américa, a Copa Libertadores, em 2021. Essas são apenas algumas das 
+                conquistas individuais do melhor jogador atuando em solo brasileiro desde 2021, quando chegou ao país.
+            </p>
+        </section>
+        </main>
+        
+        <footer>
+            <h3>Referências</h3>
+            <p>
+                <ul>
+                    <a href="https://pt.besoccer.com/jogador/palmares/hulk-22295">Títulos</a>
+                </ul>
+                <ul>
+                    <a href="https://pt.wikipedia.org/wiki/Hulk_(futebolista)">Wikipedia do Hulk</a>
+                </ul>
+            </p>
+
+        </footer>
+
+    </body>
+</html>

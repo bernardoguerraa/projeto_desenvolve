@@ -1,0 +1,79 @@
+<!--Você deverá implementar um formulário de pesquisa de satisfação. Esse formulário é dividido em duas partes.
+a. Dados pessoais, onde o cliente deverá fornecer seu nome, e-mail, e telefone para contato.
+b. Pesquisa, onde o cliente deverá responder a três perguntas. Duas delas utilizarão radio buttons como campo de resposta, 
+e uma utilizará menu de dropdown. Antes do botão de envio, inclua um checkbox indicando se o cliente autoriza compartilhar sua resposta com terceiros.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+
+    <body>
+       <h1>Formulário de pesquisa de satisfação</h1>
+       <form action="pagina_de_destino" method="post">
+        <section>
+            <p>
+                <h3>Dados pessoais</h3>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome"></input>
+            </p>
+            <p>
+                <label for="email">e-mail:</label>
+                <input type="e-mail" id="email"></input>
+            </p>
+            <p>
+                <label for="telefone">Telefone para contato::</label>
+                <input type="tel" id="telefone"></input>
+            </p>
+        </section>
+
+
+        <section>
+            <h3>Dados de pesquisa</h3>
+            <p>
+                 <u>Como você definiria seu nível de satisfação com o produto?</u>
+            </p>
+            <p>
+                <input type="radio" id="muitos" name="nivel">
+                <label for="muitob">Muito satisfeito</label>
+                <input type="radio" id="satis" name="nivel">
+                <label for="satis">Satisfeito</label>
+                <input type="radio" id="razoavel" name="nivel">
+                <label for="razoavel">Razoável</label>
+                <input type="radio" id="insat" name="nivel">
+                <label for="insat">Insatisfeito</label>
+            </p>
+            <p>
+                <u>De 1 a 5, qual seu nível de satisfação com a resolução do problema?</u>
+            </p>
+            <p>
+                <input type="radio" id="1" name="nota">
+                <label for="1">1</label>
+                <input type="radio" id="2" name="nota">
+                <label for="2">2</label>
+                <input type="radio" id="3" name="nota">
+                <label for="3">3</label>
+                <input type="radio" id="4" name="nota">
+                <label for="4">4</label>
+                <input type="radio" id="5" name="nota">
+                <label for="5">5</label>
+            </p>
+            <p>
+                <label for="comprar_mais"><u>Qual a chance de você seguir comprando nossos produtos?</u></label>
+                <select>
+                    <option>Alta</option>
+                    <option>Média</option>
+                    <option>Baixa</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" id="compartilha">
+                <label for="compartilha">Autorizo compartilhar minhas respostas com terceiros</label>
+            </p>
+        </section>
+        
+
+
+       </form>
+    </body>
+</html>
