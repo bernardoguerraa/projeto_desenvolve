@@ -1,0 +1,7 @@
+Inicio;
+leia n;
+n1=n-1;
+n2=10-2;
+r=n1*10+n2;
+imprima r;
+fim;
