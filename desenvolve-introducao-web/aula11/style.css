@@ -1,0 +1,30 @@
+/* 1. Mudar as cores dos links */
+a {
+  color: red; /* Cor padrão do link */
+}
+
+a:hover {
+  color: lemonchiffon; /* Cor do link ao passar o mouse */
+}
+
+/* 2. Customizar parágrafos */
+p {
+  font-family: Arial, sans-serif; /* Fonte padrão para parágrafos */
+}
+
+h1 + p {
+  font-weight: bold; /* Parágrafos logo após h1 em negrito */
+}
+
+/* 3. Estilizar a classe .destaque */
+.destaque {
+  font-family: Arial, sans-serif; /* Fonte padrão para a classe .destaque */
+}
+
+.destaque p {
+  font-weight: bold; /* Parágrafos com a classe .destaque em negrito */
+}
+
+.destaque strong {
+  color: red; /* <strong> com a classe .destaque ficará em vermelho */
+}
