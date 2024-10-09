@@ -1,0 +1,46 @@
+/* cor de fundo { color: #A68A72; }
+cor de fundo 2 { color: #73523F; }
+fonte { color: #26100B; }
+destaque1 { color: #F2F2F2; }
+destaque2 { color: #0D0D0D; } */
+
+html{
+    background-color: #A68A72;
+    color: #26100B;
+
+    font-size: 18px;
+    font-family: serif;
+}
+
+p {
+    text-indent: 1em; /* Indenta os parágrafos em 1em */
+}
+
+h1, h2, h3 {
+    text-align: center; /* Alinha todos os títulos ao centro */
+}
+
+h1 {
+    font-size: 1.8rem; 
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem; 
+}
+
+.summary {
+    text-align: center; /* Alinhamento centralizado para a seção de resumo */
+}
+
+.main {
+    line-height: 1.5; /* Espaçamento entre as linhas de 1.5 para os parágrafos da seção principal */
+}
+
+/* 4. Abreviaturas */
+abbr {
+    font-variant: small-caps; /* Customiza as abreviaturas para small-caps */
+}
