@@ -44,3 +44,65 @@ h3 {
 abbr {
     font-variant: small-caps; /* Customiza as abreviaturas para small-caps */
 }
+
+/* Definir largura da página em 80%, centralizando-a, com um limite de 1280px */
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto; /* Centraliza a página */
+}
+
+/* Definir altura da seção de introdução */
+#zen-intro {
+    height: 550px;
+}
+
+/* Remover o container #design-archives da página */
+#design-archives {
+    display: none;
+}
+
+/* Inverter as cores do cabeçalho */
+#zen-intro header {
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Fonte clara */
+}
+
+/* Colocar o título e o subtítulo lado a lado */
+#zen-intro header h1, #zen-intro header h2 {
+    display: inline-block;
+}
+
+/* Adicionar espaçamento lateral de 1em ao título principal */
+#zen-intro header h1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Remover bullets dos itens de menu no painel lateral */
+aside ul {
+    list-style-type: none;
+}
+
+/* Aumentar o espaçamento entre os itens do menu */
+aside ul li {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Adicionar espaçamento externo no rodapé */
+footer {
+    margin: 4%;
+    padding: 1em;
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto claro */
+}
+
+/* Transformar os links do rodapé em caixas com borda sólida */
+footer a {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 0.5em;
+    color: #fff; /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado */
+}
