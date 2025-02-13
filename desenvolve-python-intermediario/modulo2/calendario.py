@@ -1,62 +1,86 @@
-from datetime import datetime
+from datetime import datetime, timedelta
+from abc import ABC, abstractmethod
 
-class Evento:
-    total_eventos = 0  # atributo de classe para contar eventos
-
-    def __init__(self, titulo: str, data_hora: datetime, descricao: str):
-        self.titulo = titulo
-        self.data_hora = data_hora
-        self.descricao = descricao
-        self.is_concluido = False  # inicializa como não concluído
-        
-        Evento.total_eventos += 1  # incrementa o total de eventos
-
+class EventoABC(ABC):
+    def __init__(self, titulo: str, descricao: str):
+        self._titulo = titulo
+        self._descricao = descricao
+    
+    @abstractmethod
+    def __str__(self):
+        pass
+    
+    @abstractmethod
     def isConcluido(self):
-        if self.data_hora < datetime.now():
-            self.is_concluido = True
-        return self.is_concluido
+        pass
 
-    @classmethod
-    def num_eventos(cls):
-        return cls.total_eventos
+class DataHora:
+    FORMAT = '%d/%m/%Y, %H:%M'
+    
+    def __init__(self):
+        self._data_hora = None
+    
+    @property
+    def data_hora(self):
+        return self._data_hora.strftime(self.FORMAT) if self._data_hora else None
+    
+    @data_hora.setter
+    def data_hora(self, value: str):
+        try:
+            self._data_hora = datetime.strptime(value, self.FORMAT)
+        except ValueError:
+            raise ValueError("Formato de data inválido. Use '%d/%m/%Y, %H:%M'")
+    
+    def isPassado(self):
+        return self._data_hora < datetime.now()
+    
+    def somaDias(self, num_dias: int):
+        data_hora_somada = self._data_hora + timedelta(days=num_dias)
+        return data_hora_somada.strftime(self.FORMAT)
 
-    @staticmethod
-    def valida_evento(nome, data_hora, descricao):
-        return isinstance(nome, str) and isinstance(data_hora, datetime) and isinstance(descricao, str)
+class EventoUnico(EventoABC):
+    def __init__(self, titulo: str, descricao: str, data_hora: str):
+        super().__init__(titulo, descricao)
+        self._data_hora = DataHora()
+        self._data_hora.data_hora = data_hora
+    
+    def isConcluido(self):
+        return self._data_hora.isPassado()
     
     def __str__(self):
-        return f"Evento: {self.titulo}, Data: {self.data_hora}, Descrição: {self.descricao}, Concluído: {self.is_concluido}"
+        return f"Evento: {self._titulo}, Data: {self._data_hora.data_hora}, Descrição: {self._descricao}, Concluído: {self.isConcluido()}"
     
-    def __eq__(self, other):
-        return self.data_hora == other.data_hora
-    
-    def __ne__(self, other):
-        return self.data_hora != other.data_hora
-    
-    def __lt__(self, other):
-        return self.data_hora < other.data_hora
-    
-    def __le__(self, other):
-        return self.data_hora <= other.data_hora
-    
-    def __gt__(self, other):
-        return self.data_hora > other.data_hora
-    
-    def __ge__(self, other):
-        return self.data_hora >= other.data_hora
+    def editar_data_hora(self, nova_data_hora: str):
+        self._data_hora.data_hora = nova_data_hora
 
-# criando duas instâncias de Evento para testar
-evento1 = Evento("Reunião de Equipe", datetime(2025, 2, 15, 10, 30), "Revisão do projeto em andamento.")
-evento2 = Evento("Aniversário do João", datetime(2025, 3, 5, 19, 0), "Festa surpresa para o João.")
+class EventoRecorrente(EventoABC):
+    def __init__(self, titulo: str, descricao: str, data_hora_inicial: str, data_hora_final: str, intervalo_repeticao: int):
+        super().__init__(titulo, descricao)
+        self._datas_horas = []
+        
+        data_hora_atual = DataHora()
+        data_hora_atual.data_hora = data_hora_inicial
+        data_hora_final_dt = datetime.strptime(data_hora_final, DataHora.FORMAT)
+        
+        while datetime.strptime(data_hora_atual.data_hora, DataHora.FORMAT) <= data_hora_final_dt:
+            self._datas_horas.append(data_hora_atual)
+            nova_data_hora = data_hora_atual.somaDias(intervalo_repeticao)
+            data_hora_atual = DataHora()
+            data_hora_atual.data_hora = nova_data_hora
+    
+    def isConcluido(self, indice: int):
+        return self._datas_horas[indice].isPassado()
+    
+    def __str__(self):
+        return "\n".join(
+            f"Evento: {self._titulo}, Data: {data.data_hora}, Descrição: {self._descricao}, Concluído: {self.isConcluido(i)}"
+            for i, data in enumerate(self._datas_horas)
+        )
+    
+    def editar_data_hora(self, data_hora_antiga: str, data_hora_nova: str):
+        for data_hora in self._datas_horas:
+            if data_hora.data_hora == data_hora_antiga:
+                data_hora.data_hora = data_hora_nova
+                return
+        raise ValueError("Data antiga não encontrada na lista de eventos recorrentes.")
 
-# Imprimindo eventos
-print(evento1)
-print(evento2)
-
-# Testando comparações
-print(f"evento1 == evento2: {evento1 == evento2}")
-print(f"evento1 != evento2: {evento1 != evento2}")
-print(f"evento1 < evento2: {evento1 < evento2}")
-print(f"evento1 <= evento2: {evento1 <= evento2}")
-print(f"evento1 > evento2: {evento1 > evento2}")
-print(f"evento1 >= evento2: {evento1 >= evento2}")
