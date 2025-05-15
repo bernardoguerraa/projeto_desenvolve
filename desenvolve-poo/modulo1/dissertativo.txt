@@ -1,0 +1,24 @@
+A alternativa mais indicada para implementar o sistema de gerenciamento de uma biblioteca, conforme o cenário descrito é a programação orientada a objetos. 
+Justificativa:
+ 1. Estrutura e Interação das Entidades
+A descrição do sistema envolve entidades bem definidas com características e comportamentos próprios:
+Livro (título, autor, gênero),
+Autor (nome, nacionalidade, obras),
+Usuário (nome, idade, histórico de empréstimos),
+Empréstimo (data de retirada, devolução, relação com livro e usuário).
+
+
+Essas entidades possuem atributos e relacionamentos, o que se encaixa naturalmente no paradigma orientado a objetos, onde cada entidade pode ser modelada como uma classe com atributos (estado) e métodos (comportamentos).
+
+
+ 2. Reuso e Extensibilidade
+A POO favorece:
+Reutilização de código por meio de herança e composição;
+Encapsulamento, que permite ocultar os detalhes internos das classes e expor apenas o necessário;
+Facilidade de manutenção e extensão, por exemplo:
+-Adicionar uma nova funcionalidade de reserva de livros;
+-Criar subclasses como LivroDidatico, LivroInfantil, etc.
+
+
+ 3. Evolução do Sistema
+Com a POO, é fácil adicionar novos tipos de usuários (ex: professor, aluno), novas regras de empréstimo, ou módulos como notificações por e-mail. Isso ocorre sem grandes impactos no sistema existente, devido ao baixo acoplamento e alta coesão.
