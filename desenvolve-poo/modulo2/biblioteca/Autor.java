@@ -1,0 +1,33 @@
+package modulo2.biblioteca;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Autor extends Pessoa{
+    private String nacionalidade;
+    private List<Livro> obrasPublicadas;
+
+    public Autor (String nome, String nacionalidade){
+        super(nome);
+        this.nacionalidade = nacionalidade;
+        this.obrasPublicadas = new ArrayList<>();
+    }
+
+    public String getNacionalidade(){
+        return nacionalidade;
+    }
+
+    public void setNacionalidade(String nacionalidade){
+        this.nacionalidade=nacionalidade;
+    }
+
+    public List<Livro> getObrasPublicadas(){
+        return obrasPublicadas;
+    }
+
+    public void AdicionarObra(Livro livro){
+        if (livro != null && !this.obrasPublicadas.contains(livro)) {
+            this.obrasPublicadas.add(livro);
+        }
+
+    }
+}
