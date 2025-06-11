@@ -52,7 +52,7 @@ public class Main {
         System.out.println("\n--- Tentando emprestar o mesmo livro ('" + javaForBeginners.getTitulo() + "') para " + mariaSilva.getNome() + " ---");
         try {
             Emprestimo emprestimoMaria = new Emprestimo(javaForBeginners, mariaSilva, new Date(), new Date());
-            System.out.println("DEBUG: Empréstimo para Maria Silva realizado com sucesso (Isso não deveria acontecer!).");
+            System.out.println("DEBUG: Empréstimo para Maria Silva realizado com sucesso (não deveria acontecer).");
         } catch (IllegalArgumentException e) {
             //Esta é a saída esperada para demonstrar a validação
             System.out.println(e.getMessage());
